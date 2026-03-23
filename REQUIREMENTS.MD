@@ -40,4 +40,14 @@ para acessar o Memovox e começar a estudar idiomas.
 **Critérios de aceitação**
 - Dado que estou nas configurações do meu perfil, seleciono a opção de "Configurar AI API Key", eu insiro a API key válida do Gemini e clico em salvar, após o sistema emite uma mensagem de validado e salva a configuração.
 - Dado que estou nas configurações do meu perfil, seleciono a opção de "Configurar AI API Key", insiro uma API Key inválida ou de outra AI, clico e salvar, então o sistema valida a key e emite um erro informando que aquela Key é inválida e que somente suporta Keys do Gemini.
-- Dado que salvei uma key válida, então ela aparece mascarada na tela (sk-******)
+- Dado que salvei uma key válida, então ela aparece mascarada na tela (sk-******) e posso remover quando quiser.
+- Dado que quero remover uma Key, eu clico no botão remover, o sistema emite uma mensagem de confirmação, eu confirmo e então o sistema mostra uma mensagem de remoção concluída e limpa o campo de API Key.
+
+### - **RF-05 - Criar Deck**
+
+**Story:** Como usuário autenticado, quero criar um deck, para organizar minhas palavras por tema e estudar.
+
+**Critérios de aceitação**
+- Dado que estou na tela de Decks, clico no botão de criar deck, insiro o nome e descrição do Deck e salvo, então o sistema emite uma mensagem de deck criado e o deck aparece na lista com tag de novo(tag visivel até 24h).
+- Dado que eu estou na tela de Decks, clico para criar e não insiro o nome e descrição, o sistema emite uma mensagem de erro apenas para o nome.
+- Dado que eu criei um deck, o sistema volta para a tela de listagem de decks com o deck criado na primeira posição.
