@@ -5,7 +5,7 @@
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![Angular](https://img.shields.io/badge/Angular-17+-red)
 
-[📖 Requirements](./REQUIREMENTS.md) · 
+[📖 Requirements](./REQUIREMENTS.MD) · 
 [🐛 Issues](https://github.com/TheJRodrigues/memovox/issues)
 
 > App gratuito e open source focado em memorização de idiomas, com interface simples e feedback de pronúncia por IA — sem complexidade, sem mensalidade.
