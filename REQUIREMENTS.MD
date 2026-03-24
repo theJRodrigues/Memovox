@@ -51,3 +51,10 @@ para acessar o Memovox e começar a estudar idiomas.
 - Dado que estou na tela de Decks, clico no botão de criar deck, insiro o nome e descrição do Deck e salvo, então o sistema emite uma mensagem de deck criado e o deck aparece na lista com tag de novo(tag visivel até 24h).
 - Dado que eu estou na tela de Decks, clico para criar e não insiro o nome e descrição, o sistema emite uma mensagem de erro apenas para o nome.
 - Dado que eu criei um deck, o sistema volta para a tela de listagem de decks com o deck criado na primeira posição.
+
+### - **RF-05 - List Decks**
+
+**Story:** As an authenticated user, I want to see my deck list, so that I can choose which one to study.
+
+**Acceptance criteria**
+- Given that I have created decks, when I access the decks screen, then I see each deck with its name, description, card count and whether the study session was completed today.
