@@ -24,14 +24,25 @@
 
 ### - **RF-02 - Login**
 
-**Story:** Como usuário já cadastrado, quero fazer login, para acessar meus decks e estudar.
+**Story:** As a User, I want to login, so that I can access my decks and study.
 
-**Critérios de aceitação:**
+**Acceptance criteria:**
 
-- Dado que insiro email e senha válidos e verificado, o sistema me redireciona para o dashboard com a lista decks
-- Dado que eu fiz o cadastro, insiro o email e senha para fazer o primeiro login, e não validei o email, o sistema exibirá uma mensagem para validar o e-mail com um botão para reenviar o email.
-- Dado que eu insiro email ou senha inválidos, o sistema emite uma mensagem de erro que os dados são incorretos(sem especificar qual está errado.)
-- Dado que não insiro email ou senha, o sistema emite uma mensagem de erro informando que o campo é obrigatório.
+- Given that I am on the login page,
+  when I fill in a valid and verified email and password,
+  then the system redirects to the Dashboard.
+
+- Given that I am on the login page,
+  when I fill in an invalid email or invalid password, 
+  then the system displays an error message(do not specify which one is invalid).
+
+- Given that I am on the login page,
+  when I fill in an unverified email,
+  then the system displays a warning to verify my email.
+
+- Given that I am on the login page,
+  when I do not fill in email or password,
+  then the system displays an error message.
 
 ### - **RF-03 - Logout**
 
