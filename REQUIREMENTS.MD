@@ -94,3 +94,22 @@
 
 **Acceptance criteria**
 - Given that I have created decks, I select the decks that I want to delete, then the system display a confirmation message and delete all the selected decks and its cards.
+
+### - **RF-09 - Create Card**
+
+**Story:** As a User, I want to create a card in the deck, so that I can study the words.
+
+**Acceptance criteria:**
+- Given that I am in the deck and have an API key,
+  when I fill in the word and translation, 
+  then the system creates the card and generates a context phrase automatically.
+
+- Given that I am in the deck and have no API key,
+  when I fill in the word and translation,
+  then the system creates the card and do not generates a context phrase.
+
+- Given that I am in the deck,
+  when I do not fill in the word and translation,
+  then the system displays an error message.
+
+
