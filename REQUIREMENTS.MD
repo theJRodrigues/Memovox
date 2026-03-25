@@ -46,12 +46,17 @@
 
 ### - **RF-03 - Logout**
 
-**Story:** Como usuário autenticado no sistema, quero fazer logout, para poder encerrar minha sessão.
+**Story:** As a user, I want to log out, so that I can end my session.
 
 **Critérios de aceitação:**
 
-- Dado que estou autenticado, eu clico no botão fazer logout, o sistema encerra minha sessão e redireciona para a página home do site (Deve limpar os cookies, dados de autenticação e invalidar tokens).
-- Dado que fiz logout, tento acessar uma página protegida, o sistema me redirecionará para a página de login
+- Given that I am on any page,
+  when I click on the "Logout" button,
+  then the system redirects me to the lading page (clear the cookies and invalidates all tokens).
+
+- Given that I am logged out, 
+  when I try to access any protected page,
+  then the system redirects me to the login page.
 
 ### - **RF-04 - AI API KEY**
 
@@ -111,5 +116,3 @@
 - Given that I am in the deck,
   when I do not fill in the word and translation,
   then the system displays an error message.
-
-
