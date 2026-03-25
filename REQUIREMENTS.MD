@@ -1,17 +1,26 @@
 # Requisitos Funcionais
+## General Rules
+- All features require authenticated user unless stated otherwise.
 
 ## Auth
 
-### - **RF-01 - Cadastro**
+### - **RF-01 - Sign Up**
 
-**Story:** Como visitante, quero criar uma conta,
-para acessar o Memovox e começar a estudar idiomas.
+**Story:** As a guest, I want to create an account, so that I can access the Memovox to start studying languages.
 
-**Critérios de aceitação:**
+**Acceptance criteria:**
 
-- Dado que preencho meu nome, email e senha válidos e confirma, minha conta é criada e o sistema encaminha um email para verificação da criação.
-- Dado que deixo algum campo obrigatório vazio, o sistema emite mensagem de erro.
-- Dado que uso um email que já existe, o sistema exibirá um dialog com a mensagem pergunta se deseja fazer login ou contestar essa utilização de email.
+- Given that I am on the create account page,
+  when I fill in my name, valid email, and valid password and click on "Create",
+  then the system sends a verification email.
+
+- Given that I am on the create account page, 
+  when I do not fill in any required field and click on "Create",
+  then the system displays an error message.
+
+- Given that I am on the create account page,
+  when I enter an email that is already in use,
+  then the system sends an alert email informing that someone attempted to create  an account using this address.
 
 ### - **RF-02 - Login**
 
