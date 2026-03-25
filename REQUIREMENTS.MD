@@ -59,3 +59,18 @@ para acessar o Memovox e começar a estudar idiomas.
 **Acceptance criteria**
 - Given that I have created decks, when I access the decks screen, then I see each deck with its name, description, card count and whether the study session was completed today.
 - Given that I have no decks, when I access the decks screen, then I see a message and a button to create my first deck.
+
+### - **RF-07 - Edit Deck**
+
+**Story:** As an authenticated user, I want to edit my deck, so that I can update the information of the deck, like name and description.
+
+**Acceptance criteria**
+- Given that I access a deck, when I update the name or description and save, then the deck information is updated successfully.
+- Given that I access a deck, when I edit and the name's blank, the system displays an error message.
+
+### - **RF-08 - Delete Deck**
+
+**Story:** As an authenticated user, I want to delete a deck, so that I can keep my deck list organized.
+
+**Acceptance criteria**
+- Given that I have created decks, I select the decks that I want to delete, then the system display a confirmation message and delete all the selected decks and its cards.
