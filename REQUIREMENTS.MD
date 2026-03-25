@@ -60,13 +60,26 @@
 
 ### - **RF-04 - AI API KEY**
 
-**Story:** Como usuário autenticado, quero cadastrar minha API Key para poder utilizar as funcionalidades de IA do Memovox.
+**Story:** As a user, I want to configure my API Key, so that I can use Memovox AI features.
 
 **Critérios de aceitação**
-- Dado que estou nas configurações do meu perfil, seleciono a opção de "Configurar AI API Key", eu insiro a API key válida do Gemini e clico em salvar, após o sistema emite uma mensagem de validado e salva a configuração.
-- Dado que estou nas configurações do meu perfil, seleciono a opção de "Configurar AI API Key", insiro uma API Key inválida ou de outra AI, clico e salvar, então o sistema valida a key e emite um erro informando que aquela Key é inválida e que somente suporta Keys do Gemini.
-- Dado que salvei uma key válida, então ela aparece mascarada na tela (sk-******) e posso remover quando quiser.
-- Dado que quero remover uma Key, eu clico no botão remover, o sistema emite uma mensagem de confirmação, eu confirmo e então o sistema mostra uma mensagem de remoção concluída e limpa o campo de API Key.
+
+- Given that I am on the AI settings page in my profile,
+  when I enter a valid Gemini API key and click on "Save",
+  then the system validate the key, stores IT securely, and displays a success message. 
+
+-Given that I am on the AI settings page in my profile,
+ when I enter a invalid API Key and click on "Save",
+ then the system displays an error message indicating that the key is invalid.
+ 
+- Given that I have a saved API key,
+  when I view the API Key settings,
+  then the system display the key in a maskared formar(e.g., sk-******).
+
+- Given that I have a saved API key,
+  when I click on "Remove",
+  then the system displays a confirmation message, and when i confirm, the system deletes the key and clears the field.
+  
 
 ### - **RF-05 - Criar Deck**
 
