@@ -10,17 +10,17 @@
 
 **Acceptance criteria:**
 
-- Given that I am on the create account page,
-  when I fill in my name, a valid email, and a valid password and click on "Create",
-  then the system sends a verification email.
+- Given that I am on the create account page,  
+  when I fill in my name, a valid email, and a valid password and click on "Create",  
+  then the system sends a verification email.  
 
-- Given that I am on the create account page,
-  when I do not fill in any required field and click on "Create",
-  then the system displays an error message.
+- Given that I am on the create account page,  
+  when I do not fill in any required field and click on "Create",  
+  then the system displays an error message.  
 
-- Given that I am on the create account page,
-  when I enter an email that is already in use,
-  then the system sends a security alert email notifying that a signup attempt was made using this address.
+- Given that I am on the create account page,  
+  when I enter an email that is already in use,  
+  then the system sends a security alert email notifying that a signup attempt was made using this address.  
 
 ### - **RF-02 - Login**
 
@@ -28,21 +28,21 @@
 
 **Acceptance criteria:**
 
-- Given that I am on the login page,
-  when I enter a valid and verified email and password,
-  then the system redirects me to the dashboard.
+- Given that I am on the login page,  
+  when I enter a valid and verified email and password,  
+  then the system redirects me to the dashboard.  
 
-- Given that I am on the login page,
-  when I enter an invalid email or password,
-  then the system displays a generic error message (without specifying which field is incorrect).
+- Given that I am on the login page,  
+  when I enter an invalid email or password,  
+  then the system displays a generic error message (without specifying which field is incorrect).  
 
-- Given that I am on the login page,
-  when I enter an unverified email,
-  then the system displays a warning asking me to verify my email.
+- Given that I am on the login page,  
+  when I enter an unverified email,  
+  then the system displays a warning asking me to verify my email.  
 
-- Given that I am on the login page,
-  when I do not enter an email or password,
-  then the system displays an error message.
+- Given that I am on the login page,  
+  when I do not enter an email or password,  
+  then the system displays an error message.  
 
 ### - **RF-03 - Logout**
 
@@ -50,13 +50,13 @@
 
 **Acceptance criteria:**
 
-- Given that I am on any page,
-  when I click on the "Logout" button,
-  then the system redirects me to the landing page and clears cookies and invalidates all tokens.
+- Given that I am on any page,  
+  when I click on the "Logout" button,  
+  then the system redirects me to the landing page and clears cookies and invalidates all tokens.  
 
-- Given that I am logged out,
-  when I try to access a protected page,
-  then the system redirects me to the login page.
+- Given that I am logged out,  
+  when I try to access a protected page,  
+  then the system redirects me to the login page.  
 
 ### - **RF-04 - AI API KEY**
 
@@ -64,22 +64,22 @@
 
 **Acceptance criteria**
 
-- Given that I am on the AI settings page in my profile,
-  when I enter a valid Gemini API key and click on "Save",
-  then the system validates the key, stores it securely, and displays a success message.
+- Given that I am on the AI settings page in my profile,  
+  when I enter a valid Gemini API key and click on "Save",  
+  then the system validates the key, stores it securely, and displays a success message.  
 
-- Given that I am on the AI settings page in my profile,
-  when I enter an invalid API key and click on "Save",
-  then the system displays an error message indicating that the key is invalid.
+- Given that I am on the AI settings page in my profile,  
+  when I enter an invalid API key and click on "Save",  
+  then the system displays an error message indicating that the key is invalid.  
  
-- Given that I have a saved API key,
-  when I view the API key settings,
-  then the system displays the key in a masked format (e.g., sk-******).
+- Given that I have a saved API key,  
+  when I view the API key settings,  
+  then the system displays the key in a masked format (e.g., sk-******).  
 
-- Given that I have a saved API key,
-  when I click on "Remove",
-  then the system displays a confirmation message,
-  and when I confirm, the system deletes the key and clears the field.
+- Given that I have a saved API key,  
+  when I click on "Remove",  
+  then the system displays a confirmation message,  
+  and when I confirm, the system deletes the key and clears the field.  
   
 
 ### - **RF-05 - Create Deck**
@@ -87,13 +87,13 @@
 **Story:** As a user, I want to create a deck so that I can organize my words by theme for studying.
 
 **Accpectance criteria**
-- Given that I am on the decks page,
-  when I click on "Create", enter the deck name and description, and click on "Save",
-  then the system displays the new deck at the top of the list with a "New" tag (for 24 hours).
+- Given that I am on the decks page,  
+  when I click on "Create", enter the deck name and description, and click on "Save",  
+  then the system displays the new deck at the top of the list with a "New" tag (for 24 hours).  
 
-- Given that I am on the decks page,
-  when I click on "Create" and do not enter the required deck name,
-  then the system displays an error message.
+- Given that I am on the decks page,  
+  when I click on "Create" and do not enter the required deck name,  
+  then the system displays an error message.  
 
 ### - **RF-06 - List Decks**
 
@@ -101,13 +101,13 @@
 
 **Acceptance criteria**
 
-- Given that I have created decks,
-  when I access the decks page,
-  then I see each deck with its name, description, card count, and whether the study session was completed today.
+- Given that I have created decks,  
+  when I access the decks page,  
+  then I see each deck with its name, description, card count, and whether the study session was completed today.  
 
-- Given that I have no decks,
-  when I access the decks page,
-  then I see a message and a button to create my first deck.
+- Given that I have no decks,  
+  when I access the decks page,  
+  then I see a message and a button to create my first deck.  
 
 ### - **RF-07 - Edit Deck**
 
@@ -115,36 +115,36 @@
 
 **Acceptance criteria**
 
-- Given that I access a deck,
-  when I update the name or description and save,
-  then the deck information is updated successfully.
+- Given that I access a deck,  
+  when I update the name or description and save,  
+  then the deck information is updated successfully.  
 
-- Given that I access a deck,
-  when I leave the name field empty and try to save,
-  then the system displays an error message.
+- Given that I access a deck,  
+  when I leave the name field empty and try to save,  
+  then the system displays an error message.  
 
 ### - **RF-08 - Delete Deck**
 
 **Story:** As a user, I want to delete a deck so that I can keep my deck list organized.
 
 **Acceptance criteria**
-- Given that I have created decks,
-  when I select one or more decks and confirm deletion,
-  then the system deletes the selected decks and all their cards.
+- Given that I have created decks,  
+  when I select one or more decks and confirm deletion,  
+  then the system deletes the selected decks and all their cards.  
 
 ### - **RF-09 - Create Card**
 
 **Story:** As a user, I want to create a card in a deck so that I can study words.
 
 **Acceptance criteria:**
-- Given that I am in a deck and have an API key,
-  when I enter a word and its translation,
-  then the system creates the card and automatically generates a contextual sentence.
+- Given that I am in a deck and have an API key,  
+  when I enter a word and its translation,  
+  then the system creates the card and automatically generates a contextual sentence.  
 
-- Given that I am in a deck and do not have an API key,
-  when I enter a word and its translation,
-  then the system creates the card without generating a contextual sentence.
+- Given that I am in a deck and do not have an API key,  
+  when I enter a word and its translation,  
+  then the system creates the card without generating a contextual sentence.  
 
-- Given that I am in a deck,
-  when I do not enter the word or its translation,
+- Given that I am in a deck,  
+  when I do not enter the word or its translation,  
   then the system displays an error message.
