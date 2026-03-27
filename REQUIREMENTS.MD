@@ -86,7 +86,7 @@
 
 **Story:** As a user, I want to create a deck so that I can organize my words by theme for studying.
 
-**Accpetance criteria**
+**Acceptance criteria**
 - Given that I am on the decks page,  
   when I click on "Create", enter the deck name and description, and click on "Save",  
   then the system displays the new deck at the top of the list with a "New" tag (for 24 hours).  
@@ -170,21 +170,25 @@
 
 **Story:** As a user, I want to delete a card, so that I can keep my cards organized.
 
+**Acceptance criteria:**
+
 - Given that I am in a deck,
   when I select one or more cards and confirm deletion,
   then the system delete the selected cards.
 
 - Given that I am in a deck,
   when I select one or more cards and cancel deletion,
-  then the system not delete any cards.
+  then the system does not delete any cards.
 
 - Given that I am in a deck,
   when I try to delete without selecting any card,
   then the system displays an error message.
 
-### - **RF12 - Start Study Session**
+### - **RF-12 - Start Study Session**
 
 **Story:** As a user, I want to start a study session, so that I can practice.
+
+**Acceptance criteria:**
 
 - Given that I am in a deck,
   when I click on "Start Session",
@@ -193,3 +197,85 @@
 - Given that I am in an empty deck,
   when I click on "Start Session",
   then the system displays a message instructing me to create a card.
+
+### - **RF-13 - Check Translation**
+
+**Story:** As a user, I want to verify if my translation is correct, so that I can learn the correct translation.
+
+**Acceptance criteria:**
+
+- Given that I am in a study session,
+  when I click on "Show Translation",
+  then the system displays the translation.
+
+### - **RF-14 - Record and Check Pronunciation**
+
+**Story:** As a user with an API Key configured, I want to record my pronunciation to verify if it is correct.
+
+**Acceptance criteria:**
+
+- Given that I am in a study session an API Key configured,
+  when I record my pronunciation and click on "Check Pronunciation",
+  then the system displays whether the pronunciation is correct or not.
+
+- Given that I do not have an API Key configured,
+  when I try to check pronunciation,
+  then the system displays an error message.
+
+- Given that I am a study session,
+  when I try to check pronunciation without recording audio,
+  then the system displays an error message.
+
+### - **RF-15 - Rate Card Difficulty**
+
+**Story:** As a user, I want to rate the difficulty of a card so that I can train the spaced repetition algorithm.
+
+**Acceptance criteria:**
+
+- Given that I am in a study session,
+  when I rate the card difficulty (e.g., Easy, Medium, Hard),
+  then system store the difficulty and update the next review time.
+
+- Given that I am in a study session,
+  when I do not rate the card and try to proceed,
+  then the system should not allow me to continue.
+
+### - **RF-16 - Displays Basic Deck Statistics**
+
+**Story:** As a user, I want to see the decks statistics when I access a deck so that I can track my learning progress.
+
+**Acceptance criteria:**
+
+- Given that I access a deck,
+  then the system should display the deck statistics at the top of the page.
+
+- Given that I access a deck,
+  then the system should display information such as total cards, studied cards, and accuracy rate.
+
+- Given that I access a deck without study data,
+  then the system should display a message indicating that there is no data available.
+  
+  ## - **RF-17 - Displays Detailed Deck Statistics**
+  
+  **Story:** As a user, I want to see the detailed deck statistics when I acccess a deck, so that I can track my learning progress.
+  
+  **Acceptance criteria:**
+  
+  - Given that I am in a deck,
+    when I click on "View Detailed Statistics",
+    then the system should display detailed statistics about my study activity.
+  
+  - Given that I am viewing the detailed statistics,
+    then the system should display my progress over time (e.g., cards studied per day and accuracy rate).
+  
+  - Given that I am viewing the detailed statistics,
+    then the system should display performance metrics such as total correct answers, total incorrect answers, and overall accuracy.
+  
+  - Given that I am viewing the detailed statistics,
+    then the system should display the distribution of card difficulty (e.g., Easy, Good, Hard).
+  
+  - Given that I am viewing the detailed statistics,
+    then the system should display the number of cards due for review.
+  
+  - Given that I am viewing the detailed statistics without study data,
+    then the system should display a message indicating that there is no data available.
