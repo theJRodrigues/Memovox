@@ -1,4 +1,4 @@
-# Requisitos Funcionais
+# Functional Requirements
 ## General Rules
 - All features require authenticated user unless stated otherwise.
 
@@ -255,7 +255,7 @@
 - Given that I access a deck without study data,
   then the system should display a message indicating that there is no data available.
   
-  ## - **RF-17 - Displays Detailed Deck Statistics**
+### - **RF-17 - Displays Detailed Deck Statistics**
   
   **Story:** As a user, I want to see the detailed deck statistics when I acccess a deck, so that I can track my learning progress.
   
@@ -279,3 +279,14 @@
   
   - Given that I am viewing the detailed statistics without study data,
     then the system should display a message indicating that there is no data available.
+
+
+# Non-Functional Requirement
+
+### **RNF-01 - Performance**
+- API responses must not exceed 3 seconds under normal load.
+- The application must support up to 30 requests per second.
+- The system must support at least 50 simultaneous users.
+- The application must remain available 24/7.
+- Deck list must support pagination of up to 15 items per page.
+- The page loading must not exceed 2 seconds under normal load.
