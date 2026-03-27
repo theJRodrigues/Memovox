@@ -74,7 +74,7 @@
  
 - Given that I have a saved API key,  
   when I view the API key settings,  
-  then the system displays the key in a masked format (e.g., sk-******).  
+  then the system displays the key in a masked format (e.g., AIza-******).  
 
 - Given that I have a saved API key,  
   when I click on "Remove",  
@@ -86,7 +86,7 @@
 
 **Story:** As a user, I want to create a deck so that I can organize my words by theme for studying.
 
-**Accpectance criteria**
+**Accpetance criteria**
 - Given that I am on the decks page,  
   when I click on "Create", enter the deck name and description, and click on "Save",  
   then the system displays the new deck at the top of the list with a "New" tag (for 24 hours).  
@@ -142,9 +142,54 @@
   then the system creates the card and automatically generates a contextual sentence.  
 
 - Given that I am in a deck and do not have an API key,  
-  when I enter a word and its translation,  
+  when I create a card, enter a value ,  
   then the system creates the card without generating a contextual sentence.  
 
-- Given that I am in a deck,  
+- Given that I am in a creation card,  
   when I do not enter the word or its translation,  
   then the system displays an error message.
+
+### - **RF-10 - Edit Card**
+
+**Story:** As a user, I want to edit a card, so that I can keep my cards updated.
+
+**Acceptance criteria:**
+- Given that I am editing a card,
+  when I update only the "front" or only the "back" field and click on "Save",
+  then the system updates the card successfully.
+
+- Given that I am editing a card,
+  when I click on "Edit Card", do not enter a value in the front or back field and click on "Save",
+  then the system displays an error message.
+
+- Given that I am editing a card,
+  when I click on "Cancel",
+  then the system discards the changes.
+
+### - **RF-11 - Delete Card**
+
+**Story:** As a user, I want to delete a card, so that I can keep my cards organized.
+
+- Given that I am in a deck,
+  when I select one or more cards and confirm deletion,
+  then the system delete the selected cards.
+
+- Given that I am in a deck,
+  when I select one or more cards and cancel deletion,
+  then the system not delete any cards.
+
+- Given that I am in a deck,
+  when I try to delete without selecting any card,
+  then the system displays an error message.
+
+### - **RF12 - Start Study Session**
+
+**Story:** As a user, I want to start a study session, so that I can practice.
+
+- Given that I am in a deck,
+  when I click on "Start Session",
+  then the system redirect me to the study page.
+
+- Given that I am in an empty deck,
+  when I click on "Start Session",
+  then the system displays a message instructing me to create a card.
