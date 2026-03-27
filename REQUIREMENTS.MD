@@ -315,3 +315,36 @@
 - When the Gemini API is unavailable, the system must display an informational message and disable AI features.
 - When the user has no API key configured, the system must disable AI features and display a message explaining how to configure one.
 - When an internal error occurs, the system must display a friendly error message without exposing technical details.
+
+
+# Business Rules
+
+### **RN-01 - Deck**
+
+- The decks name is required and must have a maximum of 150 characters.
+- The "New" tag must be visible for 24 hours after deck creation.
+- Each user must have a maximum of 30 decks.
+- If the user misses a study day, the deck must display a visual indicator in the deck encouraging the user to resume.
+
+### **RN-02 - User**
+
+- Email must be unique.
+- Email must be valid and a maximum of 150 characters.
+- Password must have a minimum of 8 characters, and a maximum of 30 characters with special characters and uppercase letters.
+
+### **RN-03 - Study sessions**
+
+- A deck must have at least 1 card to start a study session.
+- User must give a feedback for difficulty.
+- User must have an API Key configured to use the AI features.
+- The pronunciation recording must have a maximum of 30 seconds.
+- User must have a maximum of 3 study sessions in each deck per day.
+- The study session must have a maximum of 50 cards.
+- The user's streak increases by 1 for each day they complete at least one study session.
+- If the user misses a day, the streak resets to zero.
+
+### **RN-04 - Cards**
+
+- Each deck must have a maximum of 1000 cards per deck.
+- The "front" and "back" field must have a maximum of 256 characters.
+- The "front" and "back" field must be required.
