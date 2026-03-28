@@ -74,20 +74,24 @@ Apps populares de aprendizado de idiomas têm limitações que frustram quem est
 
 ## Arquitetura
 
-```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
-│  Landing Page   │     │   Angular SPA    │     │  Spring API │
-│  (Astro/SSG)    │     │  (Angular 17)    │────▶│  (REST/JWT) │
-└─────────────────┘     └──────────────────┘     └──────┬──────┘
-                                                        │
-                                         ┌──────────────┼──────────────┐
-                                         ▼              ▼              ▼
-                                     PostgreSQL      RabbitMQ      Gemini API
-                                                        │
-                                                (worker de áudio)
+
+```mermaid
+graph TD
+
+  A[User] -->  B1[Landing Page <br> (Astro • SSG)]
+  A -->  B2[Angular SPA <br> (Angular 21)]
+  
+  C[Spring API <br>(REST • JWT • oAuth2 • Argon2)]
+  
+  B1 --> C
+  B2 --> C
+  
+  C --> D[PostgreSQL]
+  C --> E[RabbitMQ <br>(Pronounciation)] --> G[Gemini API]
+  C --> F[Gemini API <br>(Context phrase)]
 ```
 
-O processamento de áudio é assíncrono: o front-end envia o áudio via Web Speech API, a API publica uma mensagem no RabbitMQ e um worker consome e envia para a IA — evitando bloqueio na requisição principal.
+O processamento de áudio é assíncrono: o front-end envia o áudio, a API publica uma mensagem no RabbitMQ e um worker consome e envia para a IA — evitando bloqueio na requisição principal.
 
 ---
 
