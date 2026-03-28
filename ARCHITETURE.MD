@@ -3,10 +3,10 @@
 ```mermaid
 graph TD
 
-  A[User] -->  B1[Landing Page \n (Astro | SSG)]
+  A[User] -->  B1[Landing Page \n (Astro - SSG)]
   A -->  B2[Angular SPA \n (Angular 21)]
   
-  C[Spring API \n (REST | JWT | oAuth2 | Argon2)]
+  C[Spring API \n (REST - JWT - oAuth2 - Argon2)]
   
   B1 --> C
   B2 --> C
